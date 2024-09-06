@@ -3,9 +3,9 @@ import TheHeader from "@/components/TheHeader.vue";
 import EntryEditor from "@/components/EntryEditor.vue";
 import EntryCard from "@/components/EntryCard.vue";
 
-import type Emoji from "@/types/Emoji";
+import type Entry from "@/types/Entry";
 
-const handleCreateEntry = (data: { text: string; emoji: Emoji | null }) => {
+const handleCreateEntry = (data: Entry) => {
   console.log(data);
 }
 </script>
