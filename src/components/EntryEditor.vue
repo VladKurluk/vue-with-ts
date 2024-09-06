@@ -15,6 +15,10 @@ const emoji = ref<Emoji | null>(null);
 const maxChars = 280;
 const charCount = computed(() => text.value.length);
 
+defineEmits<{
+  (e: "create", entry: { text: string; emoji: Emoji | null }): void
+}>();
+
 const handleTextInput = (e: Event) => {
   const textarea = e.target as HTMLTextAreaElement;
 
@@ -27,7 +31,7 @@ const handleTextInput = (e: Event) => {
 </script>
 
 <template>
-  <form class="entry-form" @submit.prevent>
+  <form class="entry-form" @submit.prevent="$emit('create', { text, emoji })">
     <textarea
       :value="text"
       @keyup="handleTextInput"
