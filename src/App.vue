@@ -1,12 +1,16 @@
 <script setup lang="ts">
+import { reactive } from "vue";
+
 import TheHeader from "@/components/TheHeader.vue";
 import EntryEditor from "@/components/EntryEditor.vue";
 import EntryCard from "@/components/EntryCard.vue";
 
 import type Entry from "@/types/Entry";
 
+const entries: Entry[] = reactive([]);
+
 const handleCreateEntry = (data: Entry) => {
-  console.log(data);
+  entries.unshift(data);
 }
 </script>
 
@@ -15,7 +19,7 @@ const handleCreateEntry = (data: Entry) => {
     <TheHeader />
     <EntryEditor @create="handleCreateEntry"/>
     <ul>
-      <li>
+      <li v-for="entry in entries" :key="entry.id">
         <EntryCard />
       </li>
     </ul>

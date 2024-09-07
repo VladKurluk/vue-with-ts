@@ -16,7 +16,7 @@ const emoji = ref<Emoji | null>(null);
 const maxChars = 280;
 const charCount = computed(() => body.value.length);
 
-defineEmits<{
+const emit = defineEmits<{
   (e: "create", entry: Entry): void
 }>();
 
@@ -29,18 +29,25 @@ const handleTextInput = (e: Event) => {
     body.value = textarea.value = textarea.value.slice(0, maxChars);
   }
 }
+
+const handleFormSubmit = () => {
+  emit('create', { 
+    body: body.value,
+    emoji: emoji.value,
+    createdAt: new Date(),
+    userId: 1,
+    id: Math.random()
+  });
+
+  body.value = "";
+  emoji.value = null;
+}
 </script>
 
 <template>
   <form
     class="entry-form"
-    @submit.prevent="$emit('create', { 
-      body,
-      emoji,
-      createdAt: new Date(),
-      userId: 1,
-      id: Math.random()
-    })"
+    @submit.prevent="handleFormSubmit"
   >
     <textarea
       :value="body"
