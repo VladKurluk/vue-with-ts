@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 
 import EmojiField from "@/components/EmojiField.vue";
 import ArrowCircleRight from "@/assets/icons/arrow-circle-right.svg";
@@ -15,6 +15,9 @@ const emoji = ref<Emoji | null>(null);
 
 const maxChars = 280;
 const charCount = computed(() => body.value.length);
+
+const textarea = ref<HTMLTextAreaElement | null>(null);
+onMounted(() => textarea.value?.focus());
 
 const emit = defineEmits<{
   (e: "create", entry: Entry): void
@@ -50,6 +53,7 @@ const handleFormSubmit = () => {
     @submit.prevent="handleFormSubmit"
   >
     <textarea
+      ref="textarea"
       :value="body"
       @keyup="handleTextInput"
       placeholder="New Journal Entry for danielkelly_io"
