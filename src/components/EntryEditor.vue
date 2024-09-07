@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted, inject } from "vue";
 
 import EmojiField from "@/components/EmojiField.vue";
 import ArrowCircleRight from "@/assets/icons/arrow-circle-right.svg";
@@ -7,6 +7,9 @@ import ArrowCircleRight from "@/assets/icons/arrow-circle-right.svg";
 // import type { Ref } from "vue";
 import type Emoji from "@/types/Emoji";
 import type Entry from "@/types/Entry";
+import { userInjectionKey } from "../injectionKeys";
+
+const injectedUser = inject(userInjectionKey);
 
 const body = ref("");
 // const emoji: Ref<Emoji | null> = ref(null);
@@ -56,7 +59,7 @@ const handleFormSubmit = () => {
       ref="textarea"
       :value="body"
       @keyup="handleTextInput"
-      placeholder="New Journal Entry for danielkelly_io"
+      :placeholder="`New Journal Entry for ${injectedUser?.username || 'Anonymous'}`"
     ></textarea>
     <EmojiField v-model="emoji" />
     <div class="entry-form-footer">

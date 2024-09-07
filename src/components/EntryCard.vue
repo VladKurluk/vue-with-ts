@@ -1,8 +1,12 @@
 <script lang="ts" setup>
+import { inject } from "vue";
 import DateDisplay from "./DateDisplay.vue";
 import UseEmojis from "@/composables/UseEmojis";
 
 import type Entry from "@/types/Entry";
+import { userInjectionKey } from "../injectionKeys";
+
+const injectedUser = inject(userInjectionKey);
 
 const { findEmoji } = UseEmojis();
 
@@ -19,7 +23,7 @@ defineProps<{
     <div class="entry-footer">
       <DateDisplay :date="entry.createdAt" class="mr-2" />
       |
-      <span class="ml-2">danielkelly_io</span>
+      <span class="ml-2">{{ entry.userId === injectedUser?.id ? injectedUser?.username : "Anonymous" }}</span>
     </div>
   </div>
 </template>
