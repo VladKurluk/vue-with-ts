@@ -26,7 +26,6 @@ const handleCreateEntry = (data: Entry) => {
 
 <template>
   <main class="container m-auto p-10">
-    <h1>Hover me <ToolTip text="Tooltip Text" /></h1>
     <TheHeader />
     <EntryEditor @create="handleCreateEntry"/>
     <ul>
