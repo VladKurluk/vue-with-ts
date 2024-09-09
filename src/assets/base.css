@@ -34,11 +34,11 @@ svg, svg path{
   @apply flex justify-between;
 }
 .emoji-container{
-  @apply flex mb-5;
+  @apply flex gap-x-2 mb-5;
 }
 .emoji-container svg{
   transition: .2s ease all;
-  @apply w-8 mr-2 cursor-pointer;
+  @apply w-8 cursor-pointer;
 }
 .emoji-container svg.selected, .emoji-container svg.selected path{
   @apply fill-white dark:fill-white rounded-3xl;
