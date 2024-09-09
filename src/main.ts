@@ -1,12 +1,10 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import { firstPluginExample } from "./plugins/firstPlugin";
+import { toolTipPlugin } from "./plugins/toolTipPlugin";
 import "@/assets/base.css";
 
 const app = createApp(App);
 
-app.use(firstPluginExample, {
-    option1: "foo",
-});
+app.use(toolTipPlugin);
 
 app.mount("#app");
