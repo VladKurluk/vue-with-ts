@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { ref, onMounted, onUpdated, onUnmounted } from 'vue';
+import { ref, onMounted, onUpdated, onUnmounted, inject } from 'vue';
 import tippy, { Instance, Props, Placement } from 'tippy.js';
+import { tooltipOptionsInjectionKey } from "@/injectionKeys";
 import 'tippy.js/dist/tippy.css';
 
-interface TippyOptions {
+export interface TippyOptions {
   placement?: Placement,
   delay?: number
 }
@@ -25,6 +26,7 @@ function initTippy() {
   if (parent instanceof HTMLElement) {
     tippyInstance = tippy(parent, {
       content: props.text,
+      ...inject(tooltipOptionsInjectionKey),
       ...props.options,
     });
   }

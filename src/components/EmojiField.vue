@@ -25,7 +25,7 @@ defineEmits(["update:modelValue"]);
       <ToolTip
         :text="emoji.name"
         :options="{
-          placement: 'top',
+          placement: 'top-end',
           delay: 100
         }"
       />

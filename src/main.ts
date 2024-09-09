@@ -5,6 +5,8 @@ import "@/assets/base.css";
 
 const app = createApp(App);
 
-app.use(toolTipPlugin);
+app.use(toolTipPlugin, {
+    placement: "top-start",
+});
 
 app.mount("#app");
