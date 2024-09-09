@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import { ref, onMounted, onUpdated, onUnmounted, inject } from 'vue';
-import tippy, { Instance, Props, Placement } from 'tippy.js';
+import tippy, { Instance, Props } from 'tippy.js';
 import { tooltipOptionsInjectionKey } from "@/injectionKeys";
 import 'tippy.js/dist/tippy.css';
 
-export interface TippyOptions {
-  placement?: Placement,
-  delay?: number
-}
+export interface TippyOptions extends Partial<Props> {}
 
 const props = defineProps<{
   text: string,

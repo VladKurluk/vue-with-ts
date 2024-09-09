@@ -27,7 +27,8 @@ defineEmits(["update:modelValue"]);
         :options="{
           placement: 'top-end',
           delay: 100,
-          arrow: true
+          arrow: true,
+          offset: [0, 15],
         }"
       />
     </span>
