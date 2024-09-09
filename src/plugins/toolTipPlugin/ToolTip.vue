@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import tippy from 'tippy.js';
+import { ref, onMounted, onUpdated, onUnmounted } from 'vue';
+import tippy, { Instance, Props } from 'tippy.js';
 import 'tippy.js/dist/tippy.css';
 
 const props = defineProps<{
@@ -8,17 +8,24 @@ const props = defineProps<{
 }>();
 
 const tooltip = ref<HTMLSpanElement | null>(null);
+let tippyInstance: Instance<Props> | null = null;
 
-onMounted((): void => {
+function initTippy() {
   const parent = tooltip.value?.parentNode;
   if (!parent) return;
 
+  if(tippyInstance) tippyInstance.destroy();
+
   if (parent instanceof HTMLElement) {
-    tippy(parent, {
+    tippyInstance = tippy(parent, {
       content: props.text,
     });
   }
-});
+};
+
+onMounted(initTippy);
+onUpdated(initTippy);
+onUnmounted((): void => tippyInstance?.destroy());
 </script>
 
 <script lang="ts">
