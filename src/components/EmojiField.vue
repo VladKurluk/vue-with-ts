@@ -26,7 +26,8 @@ defineEmits(["update:modelValue"]);
         :text="emoji.name"
         :options="{
           placement: 'top-end',
-          delay: 100
+          delay: 100,
+          arrow: true
         }"
       />
     </span>
