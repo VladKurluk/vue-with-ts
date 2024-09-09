@@ -1,10 +1,16 @@
 <script setup lang="ts">
 import { ref, onMounted, onUpdated, onUnmounted } from 'vue';
-import tippy, { Instance, Props } from 'tippy.js';
+import tippy, { Instance, Props, Placement } from 'tippy.js';
 import 'tippy.js/dist/tippy.css';
 
+interface TippyOptions {
+  placement?: Placement,
+  delay?: number
+}
+
 const props = defineProps<{
-  text: string
+  text: string,
+  options: TippyOptions
 }>();
 
 const tooltip = ref<HTMLSpanElement | null>(null);
@@ -19,6 +25,7 @@ function initTippy() {
   if (parent instanceof HTMLElement) {
     tippyInstance = tippy(parent, {
       content: props.text,
+      ...props.options,
     });
   }
 };

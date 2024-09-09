@@ -22,7 +22,13 @@ defineEmits(["update:modelValue"]);
           )
         "
       ></component>
-      <ToolTip :text="emoji.name" />
+      <ToolTip
+        :text="emoji.name"
+        :options="{
+          placement: 'top',
+          delay: 100
+        }"
+      />
     </span>
   </div>
 </template>
