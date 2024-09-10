@@ -8,17 +8,29 @@ defineEmits(["update:modelValue"]);
 
 <template>
   <div class="emoji-container">
-    <component
+    <span
       v-for="emoji in emojis"
-      :is="emoji.component"
       :key="emoji.name"
-      :class="{ selected: modelValue === emoji.name }"
-      @click="
-        $emit(
-          'update:modelValue',
-          emoji.name === modelValue ? null : emoji.name
-        )
-      "
-    ></component>
+    >
+      <component
+        :is="emoji.component"
+        :class="{ selected: modelValue === emoji.name }"
+        @click="
+          $emit(
+            'update:modelValue',
+            emoji.name === modelValue ? null : emoji.name
+          )
+        "
+      ></component>
+      <ToolTip
+        :text="emoji.name"
+        :options="{
+          placement: 'top-end',
+          delay: 100,
+          arrow: true,
+          offset: [0, 15],
+        }"
+      />
+    </span>
   </div>
 </template>
