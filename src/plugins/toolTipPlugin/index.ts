@@ -5,7 +5,7 @@ import type { TippyOptions } from "./ToolTip.vue";
 import { defu } from "defu";
 import { hideAll } from "tippy.js";
 
-export function createToolTipPlugin(options?: TippyOptions): Plugin {
+export function createToolTipPlugin(options: TippyOptions = {}): Plugin {
   return (app: App): void => {
     options = defu(options, {
       arrow: false
