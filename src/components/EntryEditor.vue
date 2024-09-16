@@ -64,7 +64,30 @@ const handleFormSubmit = () => {
     <EmojiField v-model="emoji" />
     <div class="entry-form-footer">
       <span>{{ charCount }} / 280</span>
-      <button>Remember <ArrowCircleRight width="20" /></button>
+      <button>Remember <ArrowCircleRight width="20" class="icons" /></button>
     </div>
   </form>
 </template>
+
+<style lang="postcss" scoped>
+button {
+  @apply px-5 py-2 bg-teal-700 rounded text-white flex;
+}
+button svg path {
+  @apply fill-white;
+}
+button svg {
+  @apply ml-3 fill-white;
+}
+
+/* Entry Form */
+.entry-form {
+  @apply p-5 rounded-md mt-10 bg-gray-200 dark:bg-slate-800;
+}
+.entry-form textarea {
+  @apply w-full p-5 rounded-md mb-5 dark:bg-slate-900 h-40 resize-none;
+}
+.entry-form-footer {
+  @apply flex justify-between;
+}
+</style>
