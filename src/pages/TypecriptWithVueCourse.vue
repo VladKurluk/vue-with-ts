@@ -25,13 +25,11 @@ const handleCreateEntry = (data: Entry) => {
 </script>
 
 <template>
-  <main class="container m-auto p-10">
-    <TheHeader />
-    <EntryEditor @create="handleCreateEntry"/>
-    <ul>
-      <li v-for="entry in entries" :key="entry.id">
-        <EntryCard :entry="entry" />
-      </li>
-    </ul>
-  </main>
+  <TheHeader />
+  <EntryEditor @create="handleCreateEntry"/>
+  <ul>
+    <li v-for="entry in entries" :key="entry.id">
+      <EntryCard :entry="entry" />
+    </li>
+  </ul>
 </template>
