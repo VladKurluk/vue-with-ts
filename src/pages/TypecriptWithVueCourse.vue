@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { reactive, provide } from "vue";
 
-import TheHeader from "@/components/TheHeader.vue";
-import EntryEditor from "@/components/EntryEditor.vue";
-import EntryCard from "@/components/EntryCard.vue";
+import TheHeader from "@/components/typescript/TheHeader.vue";
+import EntryEditor from "@/components/typescript/EntryEditor.vue";
+import EntryCard from "@/components/typescript/EntryCard.vue";
 
 import type Entry from "@/types/Entry";
-import type User from "../types/User";
-import { userInjectionKey } from "../injectionKeys";
+import type User from "@/types/User";
+import { userInjectionKey } from "@/injectionKeys";
 
 const user: User = reactive({
   id: 1,
