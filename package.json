@@ -10,6 +10,7 @@
     "typecheck": "vue-tsc -watch"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "date-fns": "^3.6.0",
     "defu": "^6.1.4",
     "gsap": "^3.12.5",
