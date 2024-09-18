@@ -46,6 +46,10 @@
       <button @click="showAnimateCss = !showAnimateCss">Toggle</button>
     </div>
   </section>
+  <section class="card">
+    <h2>Transition Group</h2>
+    <listAnimation />
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -56,6 +60,7 @@ import FadeTransition from "@/components/animation/FadeTransition.vue";
 import PopTransition from "@/components/animation/PopTransition.vue";
 import GsapTransition from "@/components/animation/GsapTransition.vue";
 import RubberBandTransition from "@/components/animation/RubberBandTransition.vue";
+import listAnimation from "@/components/animation/listAnimation.vue";
 
 const show = ref(true);
 const showGsap = ref(true);
