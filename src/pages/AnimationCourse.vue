@@ -50,9 +50,13 @@
     <h2>Transition Group</h2>
     <listAnimation />
   </section>
-  <section class="card">
+  <section class="card mb-2.5">
     <h2>AutoAnimate Plugin</h2>
-    <ShufleColors />
+    <ShufleColors boxClass="w-[100px]" />
+  </section>
+  <section class="card">
+    <h2>@vueuse/motion Plugin</h2>
+    <ShufleColors boxClass="w-full"/>
   </section>
 </template>
 

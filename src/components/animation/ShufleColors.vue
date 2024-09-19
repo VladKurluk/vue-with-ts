@@ -2,6 +2,14 @@
 import { ref } from "vue";
 import { shuffleArray } from "@/helpers/shuffleArray";
 
+interface Props {
+  boxClass?: string;
+};
+
+withDefaults(defineProps<Props>(), {
+  boxClass: '',
+});
+
 // generate random color
 const randomColor = (): string => {
   const randomColor: string = Math.floor(Math.random() * 16777215).toString(16);
@@ -20,18 +28,18 @@ const colors = ref<string[]>(Array.from({ length: 18 }, () => randomColor()));
   </button>
   <div class="flex flex-wrap" v-auto-animate>
     <div
-      class="box"
+      :class="['box', boxClass]"
       v-for="(color, i) in colors"
       @click="colors.splice(i, 1)"
       :key="color"
       :style="{ backgroundColor: color }"
+      v-motion-pop-visible
     ></div>
   </div>
 </template>
 
 <style lang="postcss" scoped>
 .box {
-  width: 100px;
   height: 100px;
   border: 1px solid black;
   margin: 5px;
