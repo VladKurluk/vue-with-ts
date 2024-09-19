@@ -1,6 +1,4 @@
-import type { Pokemon } from "@/components/animation/listAnimation.vue";
-
-export function shuffleArray(array: Pokemon[]): void {
+export function shuffleArray<T>(array: T[]): void {
   for (var i = array.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
     var temp = array[i];

@@ -41,7 +41,7 @@
     </TransitionGroup>
     <button
       class="mt-5"
-      @click="shuffleArray(pokemon)"
+      @click="shuffleArray<Pokemon>(pokemon)"
     >
       Shuffle
     </button>

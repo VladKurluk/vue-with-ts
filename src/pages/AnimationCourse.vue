@@ -35,7 +35,7 @@
       <button @click="showGsap = !showGsap">Toggle</button>
     </div>
   </section>
-  <section class="card">
+  <section class="card mb-2.5">
     <h2>Animation with Animate.css</h2>
     <div class="h-14 mb-2">
       <RubberBandTransition>
@@ -46,9 +46,13 @@
       <button @click="showAnimateCss = !showAnimateCss">Toggle</button>
     </div>
   </section>
-  <section class="card">
+  <section class="card mb-2.5">
     <h2>Transition Group</h2>
     <listAnimation />
+  </section>
+  <section class="card">
+    <h2>AutoAnimate Plugin</h2>
+    <ShufleColors />
   </section>
 </template>
 
@@ -61,6 +65,7 @@ import PopTransition from "@/components/animation/PopTransition.vue";
 import GsapTransition from "@/components/animation/GsapTransition.vue";
 import RubberBandTransition from "@/components/animation/RubberBandTransition.vue";
 import listAnimation from "@/components/animation/listAnimation.vue";
+import ShufleColors from "@/components/animation/ShufleColors.vue";
 
 const show = ref(true);
 const showGsap = ref(true);
