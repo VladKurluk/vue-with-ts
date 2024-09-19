@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import { ref, computed, onMounted, inject } from "vue";
 
-import EmojiField from "@/components/EmojiField.vue";
+import EmojiField from "./EmojiField.vue";
 import ArrowCircleRight from "@/assets/icons/arrow-circle-right.svg";
 
 // import type { Ref } from "vue";
 import type Emoji from "@/types/Emoji";
 import type Entry from "@/types/Entry";
-import { userInjectionKey } from "../injectionKeys";
+import { userInjectionKey } from "@/injectionKeys";
 
 const injectedUser = inject(userInjectionKey);
 

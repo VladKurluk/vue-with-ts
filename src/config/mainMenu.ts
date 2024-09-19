@@ -20,7 +20,7 @@ export const mainMenu: MenuItem[] = [
         path: "/",
       },
       {
-        title: "Animation with Vue.js 3",
+        title: "Vue.js Transitions and Animations",
         routeName: "Animation",
         path: "/animation",
       }

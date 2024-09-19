@@ -7,6 +7,11 @@ const routes = [
     name: "Home",
     component: TypecriptCourse,
   },
+  {
+    path: "/animation",
+    name: "Animation",
+    component: () => import("@/pages/AnimationCourse.vue"),
+  }
 ];
 
 const router = createRouter({

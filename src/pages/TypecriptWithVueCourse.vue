@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { reactive, provide } from "vue";
 
-import TheHeader from "@/components/TheHeader.vue";
-import EntryEditor from "@/components/EntryEditor.vue";
-import EntryCard from "@/components/EntryCard.vue";
+import TheHeader from "@/components/typescript/TheHeader.vue";
+import EntryEditor from "@/components/typescript/EntryEditor.vue";
+import EntryCard from "@/components/typescript/EntryCard.vue";
 
 import type Entry from "@/types/Entry";
-import type User from "../types/User";
-import { userInjectionKey } from "../injectionKeys";
+import type User from "@/types/User";
+import { userInjectionKey } from "@/injectionKeys";
 
 const user: User = reactive({
   id: 1,
@@ -25,13 +25,11 @@ const handleCreateEntry = (data: Entry) => {
 </script>
 
 <template>
-  <main class="container m-auto p-10">
-    <TheHeader />
-    <EntryEditor @create="handleCreateEntry"/>
-    <ul>
-      <li v-for="entry in entries" :key="entry.id">
-        <EntryCard :entry="entry" />
-      </li>
-    </ul>
-  </main>
+  <TheHeader />
+  <EntryEditor @create="handleCreateEntry"/>
+  <ul>
+    <li v-for="entry in entries" :key="entry.id">
+      <EntryCard :entry="entry" />
+    </li>
+  </ul>
 </template>

@@ -4,7 +4,7 @@ import DateDisplay from "./DateDisplay.vue";
 import UseEmojis from "@/composables/UseEmojis";
 
 import type Entry from "@/types/Entry";
-import { userInjectionKey } from "../injectionKeys";
+import { userInjectionKey } from "@/injectionKeys";
 
 const injectedUser = inject(userInjectionKey);
 
