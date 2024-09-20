@@ -11,7 +11,12 @@ const routes = [
     path: "/animation",
     name: "Animation",
     component: () => import("@/pages/AnimationCourse.vue"),
-  }
+  },
+  {
+    path: "/forms-with-formkit",
+    name: "FormsWithFormKit",
+    component: () => import("@/pages/FormWithFormKit.vue"),
+  },
 ];
 
 const router = createRouter({

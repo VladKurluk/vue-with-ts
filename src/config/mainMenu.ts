@@ -23,6 +23,11 @@ export const mainMenu: MenuItem[] = [
         title: "Vue.js Transitions and Animations",
         routeName: "Animation",
         path: "/animation",
+      },
+      {
+        title: "Robust Vue.js Forms with FormKit",
+        routeName: "FormsWithFormKit",
+        path: "/forms-with-formkit",
       }
     ]
   },
