@@ -8,8 +8,17 @@
       @submit="handleSubmit"
     >
       <template #default="{ state }">
-        <FormKit type="text" label="Username" name="username" />
-        <FormKit type="password" label="Password" name="password" />
+        <FormKit
+          type="text"
+          label="Username"
+          name="username"
+          :validation="[
+            ['required'],
+            ['url'],
+            ['length', 5, 20],
+          ]"
+        />
+        <FormKit type="password" label="Password" name="password" validation="required" />
         <button :disabled="state.loading">
           {{ state.loading ? 'Logging in...' : 'Login' }}
         </button>
