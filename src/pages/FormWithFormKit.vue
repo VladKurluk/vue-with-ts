@@ -23,11 +23,13 @@
       <template #help></template>
     </FormKit>
   </CardComponent>
+  <FormSubmissions />
 </template>
 
 <script setup lang="ts">
 import GetStarted from '@/components/formkit/GetStarted.vue';
 import CardComponent from '@/components/ui/CardComponent.vue';
+import FormSubmissions from '@/components/formkit/FormSubmissions.vue';
 </script>
 
 <style scoped>
