@@ -13,7 +13,6 @@
           label="Username"
           name="username"
           validation="(500)username_is_unique"
-          :validation-rules="{ username_is_unique }"
         />
         <FormKit type="password" label="Password" name="password" validation="required" />
         <button :disabled="state.loading">
@@ -29,8 +28,6 @@ import { ref } from "vue";
 import { wait } from "@/helpers/formkit/wait";
 import CardComponent from '@/components/ui/CardComponent.vue';
 
-import type { FormKitNode } from "@formkit/core";
-
 interface IFormData {
   username: string;
   password: string;
@@ -45,12 +42,6 @@ const handleSubmit = async (data: IFormData) => {
   await wait(3000);
   console.log(data);
 };
-
-function username_is_unique(node: FormKitNode): boolean {
-  const usernames = ['admin', 'danielkelly_io', 'vlad'];
-
-  return !usernames.includes(node.value as string);
-}
 </script>
 
 <style lang="postcss" scoped>
