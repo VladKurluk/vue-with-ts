@@ -24,12 +24,14 @@
     </FormKit>
   </CardComponent>
   <FormSubmissions />
+  <FormSchema />
 </template>
 
 <script setup lang="ts">
 import GetStarted from '@/components/formkit/GetStarted.vue';
 import CardComponent from '@/components/ui/CardComponent.vue';
 import FormSubmissions from '@/components/formkit/FormSubmissions.vue';
+import FormSchema from '@/components/formkit/FormSchema.vue';
 </script>
 
 <style scoped>
