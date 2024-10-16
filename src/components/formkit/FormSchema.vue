@@ -32,6 +32,12 @@
               name: 'password',
               validation: 'required'
             },
+            {
+              $formkit: 'multiSelect',
+              label: 'Framework',
+              value: 'Vue.js',
+              options: ['Vue.js', 'React', 'Svelte']
+            }
           ]
         },
         

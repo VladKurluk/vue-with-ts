@@ -1,6 +1,7 @@
-import { defaultConfig, DefaultConfigOptions } from '@formkit/vue';
+import { defaultConfig, DefaultConfigOptions, createInput } from "@formkit/vue";
 import { createAutoAnimatePlugin } from "@formkit/addons";
 import createToolTipPlugin from "@/plugins/formkit-plugin";
+import VueMultiselectFormKit from "@/components/formkit/VueMultiselectFormKit.vue";
 import type { FormKitNode } from "@formkit/core";
 import "@/plugins/formkit-plugin/styles.css";
 
@@ -24,6 +25,9 @@ const config: DefaultConfigOptions = {
       const usernames = ["jpschroeder", "luanguyen", "danielkelly_io"];
       return !usernames.includes(node.value as string);
     },
+  },
+  inputs: {
+    multiSelect: createInput(VueMultiselectFormKit, {}),
   },
 };
 
