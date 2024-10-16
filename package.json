@@ -10,14 +10,20 @@
     "typecheck": "vue-tsc -watch"
   },
   "dependencies": {
+    "@formkit/addons": "^1.6.7",
     "@formkit/auto-animate": "^0.8.2",
+    "@formkit/themes": "^1.6.7",
+    "@formkit/vue": "^1.6.7",
+    "@formkit/zod": "^1.6.7",
     "@vueuse/motion": "^2.2.5",
     "animate.css": "^4.1.1",
     "date-fns": "^3.6.0",
     "defu": "^6.1.4",
+    "formkit": "^1.6.7",
     "gsap": "^3.12.5",
     "tippy.js": "^6.3.7",
     "vue": "^3.4.37",
+    "vue-multiselect": "^3.1.0",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
