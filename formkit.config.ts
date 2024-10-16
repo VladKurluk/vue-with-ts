@@ -1,7 +1,8 @@
 import { defaultConfig, DefaultConfigOptions, createInput } from "@formkit/vue";
 import { createAutoAnimatePlugin } from "@formkit/addons";
 import createToolTipPlugin from "@/plugins/formkit-plugin";
-import { generateClasses } from "@formkit/themes";
+// import { generateClasses } from "@formkit/themes";
+import { rootClasses } from "./formkit.theme";
 import VueMultiselectFormKit from "@/components/formkit/VueMultiselectFormKit.vue";
 import type { FormKitNode } from "@formkit/core";
 import "@/plugins/formkit-plugin/styles.css";
@@ -13,16 +14,17 @@ const config: DefaultConfigOptions = {
     createToolTipPlugin(),
   ],
   config: {
-    classes: generateClasses({
-      global: {
-        label: "text-red-400 formkit-invalid:text-red-900",
-      },
-      text: {
-        label: "bg-blue-500",
-      },
-      password: {},
-      url: {},
-    }),
+    rootClasses,
+    // classes: generateClasses({
+    //   global: {
+    //     label: "text-red-400 formkit-invalid:text-red-900",
+    //   },
+    //   text: {
+    //     label: "bg-blue-500",
+    //   },
+    //   password: {},
+    //   url: {},
+    // }),
   },
   messages: {
     en: {

@@ -11,6 +11,8 @@
 }
 .tooltip {
   display: inline-block;
+  align-self: flex-end;
+  margin-left: 5px;
   position: relative;
   border: 1px solid currentColor;
   border-radius: 50%;
