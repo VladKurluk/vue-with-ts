@@ -14,6 +14,7 @@
     "@formkit/auto-animate": "^0.8.2",
     "@formkit/themes": "^1.6.7",
     "@formkit/vue": "^1.6.7",
+    "@formkit/zod": "^1.6.7",
     "@vueuse/motion": "^2.2.5",
     "animate.css": "^4.1.1",
     "date-fns": "^3.6.0",

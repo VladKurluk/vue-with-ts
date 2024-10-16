@@ -25,6 +25,7 @@
   </CardComponent>
   <FormSubmissions />
   <FormSchema />
+  <ZodValidation />
 </template>
 
 <script setup lang="ts">
@@ -32,6 +33,7 @@ import GetStarted from '@/components/formkit/GetStarted.vue';
 import CardComponent from '@/components/ui/CardComponent.vue';
 import FormSubmissions from '@/components/formkit/FormSubmissions.vue';
 import FormSchema from '@/components/formkit/FormSchema.vue';
+import ZodValidation from '@/components/formkit/ZodValidation.vue';
 </script>
 
 <style scoped>
