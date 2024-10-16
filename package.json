@@ -10,6 +10,7 @@
     "typecheck": "vue-tsc -watch"
   },
   "dependencies": {
+    "@formkit/addons": "^1.6.7",
     "@formkit/auto-animate": "^0.8.2",
     "@formkit/vue": "^1.6.7",
     "@vueuse/motion": "^2.2.5",

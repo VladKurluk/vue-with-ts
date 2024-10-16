@@ -23,7 +23,8 @@
               $formkit: 'text',
               label: 'Username',
               name: 'username',
-              validation: '(500)username_is_unique'
+              validation: '(500)username_is_unique',
+              help: 'Please fill out your username',
             },
             {
               $formkit: 'password',
