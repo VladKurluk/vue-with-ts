@@ -36,7 +36,10 @@
               $formkit: 'multiSelect',
               label: 'Framework',
               value: 'Vue.js',
-              options: ['Vue.js', 'React', 'Svelte']
+              options: ['Vue.js', 'React', 'Svelte'],
+              multiple: true,
+              validation: 'required',
+              name: 'prefferedFramework'
             }
           ]
         },

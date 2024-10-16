@@ -1,8 +1,13 @@
 <template>
   <Multiselect
-    :model-value="context.value"
-    :options="context.attrs.options"
+    v-bind="context.attrs"
+    :id="context.id"
+    :name="context.node.name"
+    :model-value="context._value"
+    :disabled="context.disabled"
+    :class="context.classes.input"
     @update:model-value="context.node.input($event)"
+    @blur="context.handlers.blur"
   />
 </template>
 
@@ -16,4 +21,10 @@ defineProps<{
 </script>
 
 <style src="vue-multiselect/dist/vue-multiselect.min.css">
+</style>
+
+<style scoped>
+.formkit-input.multiselect {
+  padding: 0;
+}
 </style>
