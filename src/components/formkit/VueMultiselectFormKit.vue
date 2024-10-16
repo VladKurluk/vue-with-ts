@@ -5,7 +5,7 @@
     :name="context.node.name"
     :model-value="context._value"
     :disabled="context.disabled"
-    :class="context.classes.input"
+    :class="context.classes?.input"
     @update:model-value="context.node.input($event)"
     @blur="context.handlers.blur"
   />
