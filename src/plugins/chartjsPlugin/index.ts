@@ -9,6 +9,7 @@ import {
   LinearScale,
   PointElement,
   LineElement,
+  ArcElement
 } from "chart.js";
 
 export function createChartjsPlugin(): Plugin {
@@ -22,6 +23,7 @@ export function createChartjsPlugin(): Plugin {
       LinearScale,
       PointElement,
       LineElement,
+      ArcElement
     );
   }
 };
