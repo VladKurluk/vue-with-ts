@@ -28,6 +28,11 @@ export const mainMenu: MenuItem[] = [
         title: "Robust Vue.js Forms with FormKit",
         routeName: "FormsWithFormKit",
         path: "/forms-with-formkit",
+      },
+      {
+        title: "Charts for Vue.js 3",
+        routeName: "ChartsForVue",
+        path: "/carts-for-vue-3",
       }
     ]
   },
