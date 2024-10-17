@@ -7,6 +7,8 @@ import {
   BarElement,
   CategoryScale,
   LinearScale,
+  PointElement,
+  LineElement,
 } from "chart.js";
 
 export function createChartjsPlugin(): Plugin {
@@ -17,7 +19,9 @@ export function createChartjsPlugin(): Plugin {
       Legend,
       BarElement,
       CategoryScale,
-      LinearScale
+      LinearScale,
+      PointElement,
+      LineElement,
     );
   }
 };
