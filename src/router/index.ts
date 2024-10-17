@@ -17,6 +17,11 @@ const routes = [
     name: "FormsWithFormKit",
     component: () => import("@/pages/FormWithFormKit.vue"),
   },
+  {
+    path: "/carts-for-vue-3",
+    name: "ChartsForVue",
+    component: () => import("@/pages/ChartsInVueCourse.vue"),
+  },
 ];
 
 const router = createRouter({
