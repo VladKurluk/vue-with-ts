@@ -25,25 +25,7 @@
 import { ref, computed } from "vue";
 import CardComponent from "../ui/CardComponent.vue";
 import { Bar } from "vue-chartjs";
-import {
-  Chart as ChartJS,
-  Title,
-  Tooltip,
-  Legend,
-  BarElement,
-  CategoryScale,
-  LinearScale,
-} from "chart.js";
 import type { ChartData } from "chart.js";
-
-ChartJS.register(
-  Title,
-  Tooltip,
-  Legend,
-  BarElement,
-  CategoryScale,
-  LinearScale
-);
 
 type movie = {
   title: string;
