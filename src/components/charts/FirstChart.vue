@@ -7,14 +7,15 @@
       :options="{
         plugins: {
           legend: {
-            display: false,
+            display: true,
             title: {
               display: true,
-              text: 'First chart',
+              text: 'First Bar chart',
             }
           },
         },
         responsive: true,
+        indexAxis: 'y',
       }"
     />
   </CardComponent>
@@ -60,8 +61,16 @@ const chartData = computed((): ChartData<"bar"> => {
     labels: movies.value.map((movie) => movie.title),
     datasets: [
       {
-        backgroundColor: ["#c82834", "#244771"],
+        label: "IMDb Rating",
+        backgroundColor: "#c82834",
+        stack: "rating",
         data: movies.value.map((movie) => movie.rating),
+      },
+      {
+        label: "Rotten Tomatoes Rating",
+        backgroundColor: "#244771",
+        stack: "rating",
+        data: movies.value.map((movie) => movie.rating + 1),
       },
     ],
   };
