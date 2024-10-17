@@ -25,5 +25,7 @@ export function createChartjsPlugin(): Plugin {
       LineElement,
       ArcElement
     );
+
+    ChartJS.defaults.backgroundColor = "pink";
   }
 };
