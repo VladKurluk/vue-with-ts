@@ -33,6 +33,11 @@ export const mainMenu: MenuItem[] = [
         title: "Charts for Vue.js 3",
         routeName: "ChartsForVue",
         path: "/carts-for-vue-3",
+      },
+      {
+        title: "Build a Drag-and-Drop Trello Board with Vue.js",
+        routeName: "TrelloClone",
+        path: "/trello-clone-vue",
       }
     ]
   },
