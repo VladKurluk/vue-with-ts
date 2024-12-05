@@ -22,6 +22,11 @@ const routes = [
     name: "ChartsForVue",
     component: () => import("@/pages/ChartsInVueCourse.vue"),
   },
+  {
+    path: "/trello-clone-vue",
+    name: "TrelloClone",
+    component: () => import("@/pages/TrelloCloneWithVue.vue"),
+  },
 ];
 
 const router = createRouter({
