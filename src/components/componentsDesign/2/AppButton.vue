@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import AppSpinner from './AppSpinner.vue'
 defineProps({
     // state props
