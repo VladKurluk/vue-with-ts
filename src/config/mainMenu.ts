@@ -38,6 +38,11 @@ export const mainMenu: MenuItem[] = [
         title: "Build a Drag-and-Drop Trello Board with Vue.js",
         routeName: "TrelloClone",
         path: "/trello-clone-vue",
+      },
+      {
+        title: "Vue Component Design: Master Scalable Vue.js Patterns",
+        routeName: "ComponentDesign",
+        path: "/component-design",
       }
     ]
   },
