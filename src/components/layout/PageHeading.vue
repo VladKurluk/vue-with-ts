@@ -9,7 +9,7 @@ defineProps({
 <template>
     <div>
         <h1 class="text-3xl mb-10">
-            <span class="mb-2 block badge badge-primary badge-outline">
+            <span class="mb-2 block badge badge-primary badge-outline h-auto">
                 Pattern {{ number }}
             </span>
             <slot></slot>
