@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import formKitTailwind from "@formkit/themes/tailwindcss";
+import daisyui from 'daisyui'
 
 export default {
   content: [
@@ -11,6 +12,6 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [formKitTailwind],
+  plugins: [formKitTailwind, daisyui],
 }
 
